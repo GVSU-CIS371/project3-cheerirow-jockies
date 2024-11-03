@@ -1,8 +1,12 @@
 <template>
-  <div class="syrup"></div>
+  <div class="syrup" :style="{backgroundColor: props.color}"></div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+  import type { SyrupType } from "../stores/beverage";
+  const props = defineProps<SyrupType>();
+</script>
+
 <style lang="scss" scoped>
 .syrup {
   transform: translateY(400%);
