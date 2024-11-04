@@ -1,6 +1,6 @@
 <template>
-  <div class="froth" :style="{backgroundColor: props.color}">
-    <div v-for=" in 5" class="foam"></div>
+  <div class="froth">
+    <div v-for=" in 5" class="foam"  :style="{backgroundColor: props.color}"></div>
   </div>
 </template>
 

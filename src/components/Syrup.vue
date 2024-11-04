@@ -3,7 +3,7 @@
 </template>
 
 <script setup lang="ts">
-  import type { SyrupType } from "../stores/beverage";
+import type { SyrupType } from "../stores/beverage";
   const props = defineProps<SyrupType>();
 </script>
 

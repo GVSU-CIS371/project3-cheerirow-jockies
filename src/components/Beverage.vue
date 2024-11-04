@@ -6,7 +6,10 @@
       <template v-slot:top>
         <Creamer :id="currentCream.id" :name="currentCream.name" :color="currentCream.color"/>
       </template>
-      <template v-slot:mid>
+      <template v-if="noSyrup" v-slot:mid>
+        <Syrup :id="currentSyrup.id" :name="currentSyrup.name" :color="currentBase.color"/>
+      </template>
+      <template v-else v-slot:mid>
         <Syrup :id="currentSyrup.id" :name="currentSyrup.name" :color="currentSyrup.color"/>
       </template>
       <template v-slot:bottom>
@@ -27,6 +30,8 @@ import { BaseBeverageType, CreamerType, SyrupType} from "../stores/beverage";
 
 type Props = {
   isIced: boolean;
+  noCream: boolean;
+  noSyrup: boolean;
   currentBase: BaseBeverageType;
   currentCream: CreamerType;
   currentSyrup: SyrupType;
