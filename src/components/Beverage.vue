@@ -30,11 +30,12 @@ import { BaseBeverageType, CreamerType, SyrupType} from "../stores/beverage";
 
 type Props = {
   isIced: boolean;
-  noCream: boolean;
   noSyrup: boolean;
   currentBase: BaseBeverageType;
   currentCream: CreamerType;
   currentSyrup: SyrupType;
 };
 const props = defineProps<Props>();
+
+const { isIced, noSyrup, currentBase, currentCream, currentSyrup } = props;
 </script>
