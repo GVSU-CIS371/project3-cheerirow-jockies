@@ -35,7 +35,5 @@ type Props = {
   currentCream: CreamerType;
   currentSyrup: SyrupType;
 };
-const props = defineProps<Props>();
-
-const { isIced, noSyrup, currentBase, currentCream, currentSyrup } = props;
+defineProps<Props>();
 </script>
